@@ -27,7 +27,7 @@ public class MoneyCalculatorFrame extends JFrame {
     public MoneyCalculatorFrame(List<Currency> currencies) {
         this.currencies = currencies;
         this.setTitle("MONEY CALCULATOR");
-        this.setSize(400, 300);
+        this.setSize(400, 150);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         

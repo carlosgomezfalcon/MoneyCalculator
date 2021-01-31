@@ -14,13 +14,19 @@ public class SwingMoneyDisplay extends JPanel implements MoneyDisplay {
     public void display(Money money) {
         this.money = money;
         this.removeAll();
+        this.add(prefix());
         this.add(amount());
         this.add(currency());
         this.updateUI();
     }
 
+    private Component prefix() {
+        return new JLabel("Es equivalente a ");
+    }
+    
     private Component amount() {
-        return new JLabel(String.valueOf(money.getAmount()));
+        //Redondeo a dos decimales por cuestión estética.
+        return new JLabel(String.valueOf(Math.round(money.getAmount()*100.0)/100.0));
     }
 
     private Component currency() {

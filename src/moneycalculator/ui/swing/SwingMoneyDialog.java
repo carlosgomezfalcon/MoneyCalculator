@@ -1,7 +1,6 @@
 package moneycalculator.ui.swing;
 
 import java.awt.Component;
-import java.awt.PopupMenu;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.List;
