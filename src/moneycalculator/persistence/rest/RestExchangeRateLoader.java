@@ -25,7 +25,6 @@ public class RestExchangeRateLoader implements ExchangeRateLoader {
     }
     
     private double read(String from, String to) throws IOException {
-        
         String line = read(new URL("http://data.fixer.io/api/latest?access_key=fd1c12be2fb99cd3e070448f81731cb4&symbols="+from+","+to));
         return Double.parseDouble(line.substring(line.indexOf(from)+5, line.lastIndexOf(",")));
     }    
